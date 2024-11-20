@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es5", // Keep ES5 for broader compatibility
+    "lib": ["dom", "dom.iterable", "esnext"], // Only include required libraries
+    "strict": true,
+    "esModuleInterop": true, // Ensure compatibility with CommonJS modules
+    "module": "commonjs", // Use CommonJS for `ts-node`
+    "moduleResolution": "node", // Use Node.js module resolution
+    "resolveJsonModule": true, // Allow importing JSON files
+    "outDir": "agenda-dist", // Output directory for compiled files
+    "baseUrl": ".", // Base directory for paths
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src/tasks/*", "src/agenda.ts"], // Include all task files
+  "exclude": ["node_modules", ".next"] // Exclude unnecessary directories
+}
